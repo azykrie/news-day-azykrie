@@ -1,51 +1,69 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>22 Nov 2026 — world in one image</title>
+<html lang="en"><head><meta charset="utf-8"><title>Sunday 22 November 2026 — world news in one image</title>
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;width:1024px;height:1024px;overflow:hidden}
-  body{font-family:'Liberation Sans','DejaVu Sans',sans-serif;background:#0b1226;color:#f7f4ee;position:relative}
-  body::before{content:'';position:absolute;inset:0;opacity:.08;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff 4px 5px)}
-  .wrap{position:relative;padding:30px 36px 26px;height:100%;display:flex;flex-direction:column;gap:16px}
-  .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #ffd166;padding-bottom:10px}
-  .brand{font-size:20px;font-weight:800;letter-spacing:4px;color:#ffd166;text-transform:uppercase}
-  .date{font-size:58px;line-height:.95;font-weight:900;letter-spacing:-2px;color:#fff}
+  body{font-family:'Liberation Sans','DejaVu Sans',sans-serif;background:#09101f;color:#f6f4ee;position:relative}
+  body::before{content:'';position:absolute;inset:0;opacity:.055;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff 4px 5px),repeating-linear-gradient(90deg,transparent 0 3px,#fff 4px 5px)}
+  .wrap{position:relative;padding:26px 34px 22px;height:100%;display:flex;flex-direction:column;gap:14px}
+  .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #ffd166;padding-bottom:8px}
+  .brand{font-size:17px;font-weight:800;letter-spacing:4px;color:#ffd166;text-transform:uppercase}
+  .date{font-size:52px;line-height:1;font-weight:900;letter-spacing:-2px;color:#fff;margin-top:4px}
   .date span{color:#ffd166}
-  .badge{font-size:19px;font-weight:800;letter-spacing:2px;color:#8de0d7;text-transform:uppercase;white-space:nowrap}
-  .lead{height:150px;background:linear-gradient(100deg,#3a1730,#1a2342);border:3px solid #ff5d73;border-radius:14px;
-    padding:18px 22px;display:flex;gap:20px;align-items:center;box-shadow:0 10px 26px rgba(0,0,0,.35)}
-  .lead .icon{flex:0 0 92px;height:92px;border-radius:50%;background:#ff5d73;display:grid;place-items:center;font-size:40px;font-weight:900;color:#fff;letter-spacing:-2px}
-  .lead h1{margin:0;font-size:60px;line-height:1;letter-spacing:-1px;color:#fff}
-  .lead p{margin:8px 0 0;font-size:30px;line-height:1.1;color:#ffe4d6}
+  .badge{font-size:16px;font-weight:800;letter-spacing:2px;color:#8de0d7;text-transform:uppercase;text-align:right;line-height:1.25}
+  .lead{height:148px;background:linear-gradient(100deg,#3a1730,#1a2342);border:3px solid #ff5d73;border-radius:14px;
+    padding:14px 20px;display:flex;gap:18px;align-items:center;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  .lead .badge2{flex:0 0 86px;height:86px;border-radius:50%;background:#ff5d73;display:grid;place-items:center;color:#fff}
+  .lead h1{margin:0;font-size:54px;line-height:1;letter-spacing:-1px;color:#fff}
+  .lead p{margin:9px 0 0;font-size:24px;line-height:1.12;color:#ffe4d6}
   .lead p b{color:#ffd166}
-  .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:12px}
-  .card{background:#141d38;border:2px solid #2f3c66;border-radius:12px;padding:12px 16px;display:flex;gap:14px;align-items:center;overflow:hidden}
-  .card .num{flex:0 0 54px;height:54px;border-radius:10px;background:#25345f;color:#8de0d7;font-size:28px;font-weight:900;display:grid;place-items:center}
-  .card h2{margin:0;font-size:24px;letter-spacing:3px;color:#ffd166;text-transform:uppercase}
-  .card .big{margin:3px 0 0;font-size:40px;line-height:1.04;font-weight:900;color:#fff}
-  .card .small{margin:5px 0 0;font-size:28px;line-height:1.05;color:#c5d1ef}
-  .foot{display:flex;justify-content:space-between;font-size:16px;letter-spacing:1px;color:#8fa0c8;text-transform:uppercase}
+  .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:11px}
+  .card{background:#131d38;border:2px solid #2f3c66;border-radius:12px;padding:9px 14px;display:flex;gap:13px;align-items:center;overflow:hidden;position:relative}
+  .card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+  .card .ico{flex:0 0 58px;height:58px;border-radius:12px;background:#1e2c52;color:var(--c);display:grid;place-items:center}
+  .card .ico svg{width:42px;height:42px}
+  .card .txt{min-width:0}
+  .card h2{margin:0;font-size:17px;letter-spacing:2.5px;color:var(--c);text-transform:uppercase;font-weight:900}
+  .card .big{margin:2px 0 0;font-size:31px;line-height:1.04;font-weight:900;color:#fff;white-space:nowrap}
+  .card .small{margin:4px 0 0;font-size:22px;line-height:1.05;color:#c5d1ef;white-space:nowrap}
+  .foot{display:flex;justify-content:space-between;font-size:14px;letter-spacing:.6px;color:#8fa0c8;text-transform:uppercase}
 </style></head>
 <body><div class="wrap">
   <div class="top"><div><div class="brand">One day · one image</div><div class="date">SUNDAY <span>22 NOV 2026</span></div></div>
     <div class="badge">World news<br>in one frame</div></div>
 
-  <div class="lead"><div class="icon">31</div><div>
+  <div class="lead"><div class="badge2">
+    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" stroke="#fff" stroke-width="2.4">
+      <circle cx="27" cy="27" r="18"/><path d="M9 27h36M27 9c6 5 6 31 0 36M27 9c-6 5-6 31 0 36"/>
+      <path d="M27 4l3 6-3 5-3-5 3-6z" fill="#fff" stroke="none"/>
+    </svg></div><div>
     <h1>COP31 COLLAPSES</h1>
     <p>Antalya: EU walks out over <b>fossil fuels</b>; no deal after record overtime.</p>
   </div></div>
 
   <div class="grid">
-    <div class="card"><div class="num">01</div><div>
+    <div class="card" style="--c:#8de0d7"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 40h32M12 40V18l12-8 12 8v22M18 24h5m2 0h5m-12 8h5m2 0h5M22 14l2-7 2 7"/></svg></div><div class="txt">
       <h2>Ukraine</h2><div class="big">Kyiv flats hit: 14 missing</div><div class="small">Baltic cargo ship ablaze</div></div></div>
-    <div class="card"><div class="num">02</div><div>
+
+    <div class="card" style="--c:#ffd166"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 34c4-4 8 4 12 0s8 4 12 0 8 4 12 0M12 28V12l12-6 12 6v16M24 6v22M12 18h24"/><path d="M34 7l8-4M38 11l6-4" stroke-width="3"/></svg></div><div class="txt">
       <h2>Iran war</h2><div class="big">Hormuz attacks peak</div><div class="small">Saudi downs Houthi drone</div></div></div>
-    <div class="card"><div class="num">03</div><div>
+
+    <div class="card" style="--c:#ff9f7a"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 40h36M10 40V22l14-10 14 10v18M19 40V28h10v12M24 12V5"/><path d="M14 20l10-7 10 7"/></svg></div><div class="txt">
       <h2>Gaza</h2><div class="big">Strikes go on</div><div class="small">Despite the ceasefire</div></div></div>
-    <div class="card"><div class="num">04</div><div>
-      <h2>Libya</h2><div class="big">Russian warship sinks</div><div class="small">Benghazi sea-drone strike</div></div></div>
-    <div class="card"><div class="num">05</div><div>
+
+    <div class="card" style="--c:#7fb3ff"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 36c4-4 8 4 12 0s8 4 12 0 8 4 12 0M10 30h28l-4 6H14l-4-6zM18 30V18h12v12M24 18V9M16 9h16"/><path d="M30 6l6 4-6 4" stroke-width="2"/></svg></div><div class="txt">
+      <h2>Libya</h2><div class="big">Warship hit, ablaze</div><div class="small">Benghazi sea-drone strike</div></div></div>
+
+    <div class="card" style="--c:#c9a7ff"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="10" y="24" width="28" height="18" rx="3"/><path d="M17 24v-7a7 7 0 0114 0v7M24 30v6M16 36h16"/></svg></div><div class="txt">
       <h2>Mexico</h2><div class="big">‘El Chapo Isidro’ held</div><div class="small">FBI-wanted boss in Sinaloa</div></div></div>
-    <div class="card"><div class="num">06</div><div>
+
+    <div class="card" style="--c:#ff8fa3"><div class="ico">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="12" y="7" width="24" height="34" rx="4"/><path d="M20 13h8M24 35h.1"/><path d="M6 6l36 36" stroke-width="3.2"/></svg></div><div class="txt">
       <h2>China / US</h2><div class="big">Beijing rejects FCC ban</div><div class="small">Chinese firms lose US numbers</div></div></div>
   </div>
   <div class="foot"><span>Reporting: Reuters · AP · NPR · UN News · Al Jazeera · CNN</span><span>22 November 2026</span></div>
